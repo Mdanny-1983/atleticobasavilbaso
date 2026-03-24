@@ -6,22 +6,21 @@
     <title>Club Atlético Basavilbaso | Sitio Oficial</title>
     
     <meta name="description" content="Página oficial del Club Atlético Basavilbaso. Noticias, historia, fútbol y actividades del club. Pasión en Rojo y Verde.">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         /* --- ESTILOS GENERALES Y PALETA DE COLORES --- */
         :root {
-            --rojo-club: #ce1126; /* Un rojo vibrante */
-            --verde-club: #007a33; /* Un verde deportivo */
+            --rojo-club: #ce1126; 
+            --verde-club: #007a33; 
             --oscuro: #1a1a1a;
             --gris-claro: #f4f4f4;
             --blanco: #ffffff;
             --sombra: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        * {
-            box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -31,55 +30,36 @@
             line-height: 1.6;
         }
 
-        h1, h2, h3 {
-            font-weight: 700;
-            margin-top: 0;
-        }
+        h1, h2, h3 { font-weight: 700; margin-top: 0; }
 
         /* --- HEADER --- */
         header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 15px;
             background-color: var(--rojo-club);
             color: var(--blanco);
-            padding: 20px 15px;
-            text-align:center;
-            border-bottom: 5px solid var(--verde-club); /* Franja verde distintiva */
+            border-bottom: 5px solid var(--verde-club);
+            text-align: center;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .logo-club {
+            width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
         }
 
-        header p {
-            margin: 5px 0 0;
-            font-weight: 300;
-            font-size: 1.1rem;
-        }
-/* Estilos para el logo */
-.logo-club {
-    width: 120px;       /* Ajusta este valor según qué tan grande quieras el logo */
-    height: auto;       /* Mantiene la proporción */
-    margin-bottom: 10px; /* Separa el logo del texto */
-    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2)); /* Le da un toque de profundidad */
-}
+        header h1 { margin: 0; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 1px; }
+        header p { margin: 5px 0 0; font-weight: 300; font-size: 1.1rem; }
 
-/* Ajuste al header para que todo se alinee bien */
-header {
-    display: flex;
-    flex-direction: column; /* Alinea logo, h1 y p uno debajo del otro */
-    align-items: center;    /* Centra todo horizontalmente */
-    padding: 30px 15px;
-    background-color: var(--rojo-club);
-    border-bottom: 5px solid var(--verde-club);
-}
         /* --- NAVEGACIÓN --- */
         nav {
             background-color: var(--oscuro);
             padding: 0;
             text-align: center;
-            position: sticky; /* Se queda fijo arriba al hacer scroll */
+            position: sticky;
             top: 0;
             z-index: 1000;
         }
@@ -90,7 +70,7 @@ header {
             padding: 0;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Para que se acomode en móviles */
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -104,15 +84,11 @@ header {
             transition: background 0.3s;
         }
 
-        nav a:hover {
-            background-color: var(--verde-club);
-            color: var(--blanco);
-        }
+        nav a:hover { background-color: var(--verde-club); }
 
-        /* --- HERO (PORTADA) --- */
+        /* --- HERO --- */
         .hero {
             height: 450px;
-            /* Agregamos un color de fondo oscuro de respaldo por si la imagen no carga */
             background: var(--oscuro) url("cancha2.jpg") center/cover no-repeat;
             display: flex;
             align-items: center;
@@ -121,7 +97,6 @@ header {
             position: relative;
         }
 
-        /* Superposición oscura para mejorar contraste del texto */
         .hero::before {
             content: '';
             position: absolute;
@@ -129,30 +104,12 @@ header {
             background-color: rgba(0,0,0,0.5);
         }
 
-        .hero-text {
-            position: relative; /* Para estar sobre la superposición */
-            text-align: center;
-            padding: 20px;
-            max-width: 800px;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .hero-text p {
-            font-size: 1.2rem;
-            font-weight: 300;
-        }
+        .hero-text { position: relative; text-align: center; padding: 20px; max-width: 800px; }
+        .hero-text h1 { font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero-text p { font-size: 1.2rem; font-weight: 300; }
 
         /* --- SECCIONES Y TARJETAS --- */
-        section {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
+        section { padding: 60px 20px; max-width: 1100px; margin: auto; }
 
         .seccion-titulo {
             text-align: center;
@@ -161,9 +118,7 @@ header {
             font-size: 2rem;
             text-transform: uppercase;
             position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
+            display: block;
         }
 
         .seccion-titulo::after {
@@ -186,356 +141,208 @@ header {
             padding: 25px;
             border-radius: 8px;
             box-shadow: var(--sombra);
-            border-left: 5px solid var(--rojo-club); /* Detalle a la izquierda */
+            border-left: 5px solid var(--rojo-club);
             transition: transform 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-left-color: var(--verde-club);
+        .card:hover { transform: translateY(-5px); border-left-color: var(--verde-club); }
+
+        /* --- GALERÍA INFINITA --- */
+        #galeria { overflow: hidden; padding: 60px 0; background: #fff; width: 100%; }
+        .galeria { display: flex; width: max-content; animation: desplazar 40s linear infinite; }
+        .galeria img {
+            width: 300px; height: 200px; object-fit: cover;
+            margin: 0 10px; border-radius: 12px;
+            box-shadow: var(--sombra); flex-shrink: 0; cursor: zoom-in;
+        }
+        .galeria:hover { animation-play-state: paused; }
+
+        @keyframes desplazar {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
-        .card h2 {
-            color: var(--oscuro);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+        /* --- FORMULARIO --- */
+        .contacto-container { max-width: 700px; margin: 0 auto; }
+        .form-contacto { display: flex; flex-direction: column; gap: 15px; }
+        .form-group { display: flex; flex-direction: column; gap: 5px; }
+        .form-group label { font-weight: 600; font-size: 0.9rem; }
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-family: inherit;
         }
-
-        .card p {
-            margin: 0 0 10px;
-            color: #555;
-        }
-
-      /* CONTENEDOR PRINCIPAL QUE OCULTA EL SOBRANTE */
-#galeria {
-    overflow: hidden;
-    padding: 60px 0;
-    background: #fff;
-    width: 100%;
-}
-
-/* LA CINTA QUE SE MUEVE (Contenedor de las fotos) */
-.galeria {
-    display: flex;
-    width: max-content; /* Se ajusta automáticamente al ancho de todas las fotos */
-    animation: desplazar 40s linear infinite; /* 40 segundos para una vuelta suave */
-}
-
-/* ESTILO DE LAS FOTOS */
-.galeria img {
-    width: 300px;  /* Ancho fijo para cada imagen */
-    height: 200px; /* Alto fijo */
-    object-fit: cover;
-    margin: 0 10px;
-    border-radius: 12px;
-    box-shadow: var(--sombra);
-    flex-shrink: 0; /* Evita que las imágenes se achiquen */
-}
-
-/* PAUSAR AL PASAR EL MOUSE */
-.galeria:hover {
-    animation-play-state: paused;
-}
-
-/* LA MAGIA DEL MOVIMIENTO INFINITO */
-@keyframes desplazar {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        /* Se desplaza exactamente la mitad del ancho total */
-        transform: translateX(-50%); 
-    }
-}
-        /* --- FORMULARIO DE CONTACTO --- */
-        .contacto-container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .form-contacto {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .form-group label {
-            font-weight: 600;
-            color: var(--oscuro);
-            font-size: 0.9rem;
-        }
-
-        .form-group input, 
-        .form-group textarea {
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus, 
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--verde-club);
-        }
-
         .btn-enviar {
-            background-color: var(--rojo-club);
-            color: var(--blanco);
-            padding: 15px;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 1rem;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.1s;
-            margin-top: 10px;
+            background-color: var(--rojo-club); color: var(--blanco);
+            padding: 15px; border: none; border-radius: 6px;
+            font-weight: bold; text-transform: uppercase; cursor: pointer;
+        }
+        .btn-enviar:hover { background-color: var(--verde-club); }
+
+        /* --- WHATSAPP Y LIGHTBOX --- */
+        .btn-whatsapp {
+            position: fixed; bottom: 25px; right: 25px;
+            background-color: #25d366; width: 60px; height: 60px;
+            border-radius: 50%; display: flex; justify-content: center;
+            align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1500;
         }
 
-        .btn-enviar:hover {
-            background-color: var(--verde-club);
+        .lightbox {
+            display: none; position: fixed; z-index: 2000;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.9); justify-content: center; align-items: center;
         }
+        .lightbox img { max-width: 90%; max-height: 80%; border: 3px solid white; border-radius: 8px; }
 
-        .btn-enviar:active {
-            transform: scale(0.98);
-        }
-
-        /* --- FOOTER --- */
         footer {
-            background-color: var(--oscuro);
-            color: var(--blanco);
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 40px;
-            border-top: 5px solid var(--rojo-club);
+            background-color: var(--oscuro); color: var(--blanco);
+            text-align: center; padding: 40px 20px; border-top: 5px solid var(--rojo-club);
         }
-
-        footer h3 {
-            margin: 0 0 10px;
-            color: var(--blanco);
-        }
-
-        footer p {
-            margin: 5px 0;
-            font-weight: 300;
-            opacity: 0.8;
-        }
-
-        /* --- RESPONSIVIDAD (Ajustes extra para móviles) --- */
-        @media (max-width: 768px) {
-            header h1 { font-size: 1.8rem; }
-            .hero { height: 350px; }
-            .hero-text h1 { font-size: 2.2rem; }
-            section { padding: 40px 15px; }
-            .seccion-titulo { font-size: 1.6rem; }
-            nav ul { flex-direction: column; }
-            nav a { padding: 10px; border-bottom: 1px solid #333; }
-        }
-		/* Estilos para el Lightbox */
-.lightbox {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 2000; /* Por encima de todo */
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.9); /* Fondo negro traslúcido */
-    justify-content: center;
-    align-items: center;
-    cursor: zoom-out;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 80%;
-    border: 3px solid var(--blanco);
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    animation: zoom 0.3s ease; /* Efecto de entrada */
-}
-
-.cerrar {
-    position: absolute;
-    top: 20px; right: 30px;
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-@keyframes zoom {
-    from { transform: scale(0.7); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
     </style>
 </head>
 <body>
 
-   <header>
+<header>
     <img src="logo.jpg" alt="Logo Club Atlético Basavilbaso" class="logo-club">
     <h1>Club Atlético Basavilbaso</h1>
     <p>Fundado el 21 de Mayo de 1922 | Decano "Corazón y Garra"</p>
 </header>
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#el-club">El Club</a></li>
-            <li><a href="#noticias">Noticias</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#el-club">El Club</a></li>
+        <li><a href="#noticias">Noticias</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Registro</a></li>
+    </ul>
+</nav>
 
-    <div id="inicio" class="hero">
-        <div class="hero-text">
-            <h1> DECANO "Corazón y Garra"</h1>
-            <p>Representando el orgullo de Basavilbaso, Entre Ríos, desde hace más de un siglo.</p>
-        </div>
+<div id="inicio" class="hero">
+    <div class="hero-text">
+        <h1>DECANO "Corazón y Garra"</h1>
+        <p>Representando el orgullo de Basavilbaso, Entre Ríos, desde hace más de un siglo.</p>
     </div>
+</div>
 
-    <section id="noticias">
-        <h2 class="seccion-titulo">Actualidad</h2>
-        
-        <div class="card-container">
-            <div class="card">
-                <h2>Últimas Noticias</h2>
-                <p><strong>• Se viene el torneo de la Liga:</strong> fechas a confirmar.</p>
-                <p><strong>• Escuelita:</strong> Inscripciones abiertas para niños/as de 5 a 12 años.</p>
-                <p><strong>• Obras:</strong> Avanzan las mejoras en la iluminación del estadio.</p>
-            </div>
-
-            <div class="card">
-                <h2>Próximo Partido</h2>
-                <p><strong>Rival:</strong> Deportivo Peñarol</p>
-                <p><strong>Día:</strong> Domingo</p>
-                <p><strong>Hora:</strong> 17:00 hs</p>
-                <p><strong>Lugar:</strong> Estadio del Club Atlético Basavilbaso</p>
-            </div>
-
-            <div id="el-club" class="card">
-                <h2>Nuestra Historia</h2>
-                <p>Nacido en 1922, el Club Atlético Basavilbaso es pilar del deporte y la vida social de la ciudad. Nuestros colores Rojo y Verde representan la fuerza y la esperanza de nuestra gente.</p>
-            </div>
-			<div class="card">
-                <h2>Nuestras Instalaciones y Recursos</h2>
-                <p><strong>Lo del Gringo:</strong> Cancha de fútbol 5</p>
-				<p><strong>Darc Gym</strong> Gimnasio </p>
-				<p><strong>Decamovil</strong> Micro propio</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="galeria" style="background-color: #fff; max-width: 100%; width: 100%;">
-        <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px;">
-            <h2 class="seccion-titulo">Galería de Fotos</h2>
-            
-            <div class="galeria">
-                <img src="hincha1.jpg" alt="Hinchada del Club Atlético Basavilbaso">
-                <img src="primera.jpg" alt="Equipo de primera división antes del partido">
-                <img src="reserva.jpg" alt="divisional reserva">
-                <img src="cancha.jpg" alt="Instalaciones del club">
-				<img src="infantil2.jpg" alt="Divisiones formativas2">
-				<img src="gym1.jpg" alt="gym1">
-				<img src="colectivo1.jpg" alt="colectivo cab">
-				<img src="futbol5-2.jpg" alt="Cancha de futbol5">
-				<img src="comision1.png" alt="Comision2026">
-				<img src="comision2.jpg" alt="Comision-1-2026">
-				<img src="piku.jpg" alt="boxeo piku">
-				<img src="boxeo2.jpg" alt="boxeo Corales academia">
-				<img src="trofeo1.jpg" alt="trofeo1">
-				<img src="trofeo2.jpg" alt="trofeo2">
-				<img src="trofeo3.jpg" alt="trofeo3">
-            </div>
-        </div>
-    </section>
-<section id="socios" style="background-color: #f9f9f9; padding: 60px 20px;">
-    <h2 class="seccion-titulo">Hacete Socio Online</h2>
-    <p style="text-align: center; max-width: 600px; margin: 0 auto 40px;">Apoyá al Decano desde donde estés. Pagá tu cuota mensual de forma segura.</p>
-    
+<section id="noticias">
+    <h2 class="seccion-titulo">Actualidad</h2>
     <div class="card-container">
-        <div class="card" style="text-align: center;">
-            <h3 style="color: var(--rojo-club);">Socio Activo</h3>
-            <p style="font-size: 1.5rem; font-weight: bold;">$2.500 <span style="font-size: 0.8rem; color: #777;">/mes</span></p>
-            <ul style="list-style: none; padding: 0; margin: 20px 0; font-size: 0.9rem; color: #555;">
-                <li>✓ Descuento en el Acceso a todos los partidos</li>
-				<li>✓ Descuento en el Acceso a Darc GYM</li>
-                <li>✓ Uso de las instalaciones</li>
-                <li>✓ Voto en asambleas</li>
-            </ul>
-            <a href="Https://mpago.la/1hTP11N" class="btn-enviar" style="text-decoration: none; display: block;">Pagar Cuota</a>
+        <div class="card">
+            <h2>Últimas Noticias</h2>
+            <p><strong>• Torneo Regional:</strong> Próximas fechas a confirmar.</p>
+            <p><strong>• Escuelita:</strong> Inscripciones abiertas (5 a 12 años).</p>
+            <p><strong>• Obras:</strong> Mejoras en la iluminación del estadio.</p>
+        </div>
+        <div class="card">
+            <h2>Próximo Partido</h2>
+            <p><strong>Rival:</strong> Deportivo Peñarol</p>
+            <p><strong>Día:</strong> Domingo | <strong>Hora:</strong> 17:00 hs</p>
+            <p><strong>Lugar:</strong> Estadio Arq. Bonifacio Martínez</p>
+        </div>
+        <div id="el-club" class="card">
+            <h2>Nuestra Historia</h2>
+            <p>Desde 1922, somos el pilar deportivo de Basso. Nuestros colores Rojo y Verde representan la fuerza y la esperanza de nuestra gente.</p>
+        </div>
+        <div class="card">
+            <h2>Instalaciones</h2>
+            <p><strong>Lo del Gringo:</strong> Fútbol 5</p>
+            <p><strong>Darc Gym:</strong> Gimnasio</p>
+            <p><strong>Decamovil:</strong> Micro propio</p>
         </div>
     </div>
 </section>
-    <section id="contacto">
-        <h2 class="seccion-titulo">Contactate con el Club</h2>
-        
-        <div class="card contacto-container">
-            <form class="form-contacto" action="#" method="post">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellido" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="mensaje">Mensaje o Consulta</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje aquí..." required></textarea>
-                </div>
-                
-                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
 
-    <footer>
-        <h3>Club Atlético Basavilbaso</h3>
-        
-        <p>Seguinos en nuestras redes sociales:</p>
-		Facebook: Atletico Basavilbaso<br>
-		Instagram: eldecadebasso
-		<p>Basavilbaso - Entre Ríos - Argentina</p>
-        <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.5;">© 2026 - Sitio Oficial del Club Atlético Basavilbaso.</p>
-    </footer>
-<div id="lightbox" class="lightbox" onclick="cerrarLightbox()">
-    <span class="cerrar">&times;</span>
-    <img id="img-lightbox" src="" alt="Foto en grande">
+<section id="galeria">
+    <h2 class="seccion-titulo">Galería de Fotos</h2>
+    <div class="galeria">
+        <img src="hincha1.jpg" alt="Hinchada">
+        <img src="primera.jpg" alt="Primera">
+        <img src="reserva.jpg" alt="Reserva">
+        <img src="cancha.jpg" alt="Cancha">
+        <img src="infantil2.jpg" alt="Infantil">
+        <img src="gym1.jpg" alt="Gym">
+        <img src="colectivo1.jpg" alt="Colectivo">
+        <img src="futbol5-2.jpg" alt="Fútbol 5">
+        <img src="hincha1.jpg" alt="Hinchada">
+        <img src="primera.jpg" alt="Primera">
+        <img src="reserva.jpg" alt="Reserva">
+        <img src="cancha.jpg" alt="Cancha">
+    </div>
+</section>
+
+<section id="socios" style="background-color: #f9f9f9;">
+    <h2 class="seccion-titulo">Cuota Social Online</h2>
+    <div class="card" style="text-align: center; max-width: 400px; margin: auto;">
+        <h3 style="color: var(--rojo-club);">Socio Activo</h3>
+        <p style="font-size: 1.5rem; font-weight: bold;">$2.500 <span style="font-size: 0.8rem; color: #777;">/mes</span></p>
+        <ul style="list-style: none; padding: 0; margin: 20px 0; font-size: 0.9rem; text-align: left;">
+            <li>✓ Descuento entradas local</li>
+            <li>✓ Beneficio en Darc GYM</li>
+            <li>✓ Uso de instalaciones</li>
+        </ul>
+        <a href="https://mpago.la/1hTP11N" class="btn-enviar" style="text-decoration: none; display: block;">Pagar Cuota</a>
+    </div>
+</section>
+
+<section id="contacto">
+    <h2 class="seccion-titulo">Registro de Socio</h2>
+    <div class="card contacto-container">
+        <form class="form-contacto" action="https://formspree.io/f/xaqprbbz" method="post">
+            <input type="hidden" name="_next" value="index.html">
+            <div class="form-group">
+                <label>Nombre y Apellido</label>
+                <input type="text" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label>DNI</label>
+                <input type="number" name="dni" required>
+            </div>
+            <div class="form-group">
+                <label>Número de Celular</label>
+                <input type="tel" name="celular" placeholder="3445..." required>
+            </div>
+            <div class="form-group">
+                <label>Actividad</label>
+                <select name="actividad">
+                    <option value="futbol">Fútbol</option>
+                    <option value="gym">Gimnasio</option>
+                    <option value="boxeo">Boxeo</option>
+                    <option value="colaborador">Socio Colaborador</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar Registro</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <h3>Club Atlético Basavilbaso</h3>
+    <p>Basavilbaso - Entre Ríos - Argentina</p>
+    <div style="margin: 15px 0;">
+        <a href="https://www.facebook.com/atleticobasavilbaso" target="_blank" style="color: #fff; text-decoration: none; margin-right: 15px;">Facebook</a>
+        <a href="https://www.instagram.com/eldecadebasso" target="_blank" style="color: #fff; text-decoration: none;">Instagram</a>
+    </div>
+    <p style="font-size: 0.8rem; opacity: 0.5;">© 2026 - Sitio Oficial del Decano.</p>
+</footer>
+
+<div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+    <img id="img-lightbox" src="">
 </div>
+
+<a href="https://wa.me/5493445574590" class="btn-whatsapp" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" style="width: 35px;">
+</a>
+
 <script>
-    // Función para abrir la imagen
     const galeria = document.querySelector('.galeria');
     const lightbox = document.getElementById('lightbox');
     const imgLightbox = document.getElementById('img-lightbox');
 
     galeria.addEventListener('click', (e) => {
-        // Verificamos si lo que se clickeó es una imagen
         if (e.target.tagName === 'IMG') {
-            const rutaImagen = e.target.src;
-            imgLightbox.src = rutaImagen;
+            imgLightbox.src = e.target.src;
             lightbox.style.display = 'flex';
-            // Pausamos la animación de la galería para que no se pierda de vista
-            galeria.style.animationPlayState = 'paused';
         }
     });
-
-    // Función para cerrar
-    function cerrarLightbox() {
-        lightbox.style.display = 'none';
-        // Reanudamos la animación al cerrar
-        galeria.style.animationPlayState = 'running';
-    }
 </script>
 </body>
 </html>
