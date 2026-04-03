@@ -311,69 +311,7 @@
             <img src="infantil2.jpg" alt="Infantil">
             <img src="gym1.jpg" alt="Gym">
             <img src="boxeo1.jpg" alt="Boxeo">
-        </div>
-    </div>
-</section>
-	<section id="pagos" style="background-color: #fff; padding: 40px 20px;">
-    <h2 class="seccion-titulo">Colaborá con el Club</h2>
-    <div class="card" style="text-align: center; max-width: 450px; margin: auto; border-top: 5px solid var(--verde-club); border-left: none;">
-        <img src="mercadopago.jpg" 
-     alt="Mercado Pago" 
-     style="width: 150px; height: auto; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;"
-     onerror="this.style.display='none'; document.getElementById('texto-alternativo').style.display='block';">
-
-<h3 id="texto-alternativo" style="display: none; color: #009EE3; margin-bottom: 15px;">Mercado Pago</h3>
-        <p style="margin-bottom: 20px; font-size: 0.95rem;">Podés abonar tu cuota o colaborar mediante transferencia bancaria al siguiente Alias:</p>
-        
-        <div style="background: var(--gris-claro); border: 2px solid var(--verde-club); padding: 15px; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; gap: 10px;">
-            <span id="alias-texto" style="font-weight: 700; color: var(--oscuro); font-size: 1rem; word-break: break-all;">daniel.CAB2025-27</span>
-            <button onclick="copiarAlias()" style="background: var(--rojo-club); color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; flex-shrink: 0;">
-                Copiar
-            </button>
-        </div>
-        <p id="mensaje-copiado" style="font-size: 0.8rem; color: var(--verde-club); margin-top: 10px; display: none; font-weight: bold;">¡Alias copiado al portapapeles!</p>
-    </div>
-</section>
-<script>
-function copiarAlias() {
-    const texto = document.getElementById('alias-texto').innerText;
-    navigator.clipboard.writeText(texto).then(() => {
-        const mensaje = document.getElementById('mensaje-copiado');
-        mensaje.style.display = 'block';
-        setTimeout(() => { mensaje.style.display = 'none'; }, 2500);
-    });
-}
-</script>
-<section id="contacto">
-    <h2 class="seccion-titulo">Registro de Socio</h2>
-    <div class="card contacto-container">
-        <form class="form-contacto" action="https://formspree.io/f/xaqprbbz" method="post">
-            <input type="hidden" name="_next" value="index.html">
-            <div class="form-group">
-                <label>Nombre y Apellido</label>
-                <input type="text" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label>DNI</label>
-                <input type="number" name="dni" required>
-            </div>
-            <div class="form-group">
-                <label>Número de Celular</label>
-                <input type="tel" name="celular" placeholder="3445..." required>
-            </div>
-            <div class="form-group">
-                <label>Actividad</label>
-                <select name="actividad">
-                    <option value="futbol">Fútbol</option>
-                    <option value="gym">Gimnasio</option>
-                    <option value="boxeo">Boxeo</option>
-                    <option value="colaborador">Socio Colaborador</option>
-                </select>
-            </div>
-            <button type="submit" class="btn-enviar">Enviar Registro</button>
-        </form>
-    </div>
-	
+		</div>
 </section>
 
 <footer>
@@ -390,7 +328,7 @@ function copiarAlias() {
     <img id="img-lightbox" src="">
 </div>
 
-<a href="https://wa.me/5493445574590" class="btn-whatsapp" target="_blank">
+<a href="https://wa.me/5493445550155" class="btn-whatsapp" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" style="width: 35px;">
 </a>
 
